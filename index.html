@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plataforma de cursos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="./stye.css">
 </head>
 <body>
-    
+    <nav>
+        <div class="logo">
+            <img src="./assets/fenix-logo.png" alt="logo">
+        </div>
+        <input type="text" id="search" placeholder="Pesquisar cursos...">
+
+        <!-- orgnização dos filtros -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h3>Filtros e Ordenação</h3>
+                
+                <div class="filter">
+                <label for="category">Categoria:</label>
+                <select id="category">
+                    <option value="programacao">Programação</option>
+                    <option value="design">Design</option>
+                    <option value="marketing">Marketing</option>
+                    <!-- Adicione outras categorias conforme necessário -->
+                </select>
+                </div>
+                
+                <div class="filter">
+                <label for="duration">Ordenar por Duração:</label>
+                <select id="duration">
+                    <option value="asc">Ascendente</option>
+                    <option value="desc">Descendente</option>
+                </select>
+                </div>
+                
+                <button id="apply-filters">Aplicar Filtros</button>
+        </div>
+
+        <div id="sidebar">
+            <span onclick="openNav()">Filtro<img src="./assets/Filter.svg" alt="filtro"></span>
+        </div>
+
+        <div id="user">
+            <span class="material-icons" style="font-size: 40px;">account_circle</span>
+        </div>
+            
+    </nav>
+
+    <main>
+        <div class="course-list">
+                        <!-- Aqui serão exibidos os cursos filtrados -->
+                </div>
+
+
+    </main>
+
+
+    <footer></footer>
+
+
 </body>
+ <script src="./script.js"></script>
 </html>
