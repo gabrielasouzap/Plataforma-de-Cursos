@@ -108,6 +108,7 @@ body {
 
 
   .sidenav {
+    display: block;
     height: 100%;
     width: 0;
     position: fixed;
@@ -118,6 +119,12 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    text-align: center;
+  }
+
+  .sidenav h3{
+    margin-bottom: 10px;
+    color: #EB5126;
   }
   
   .sidenav a {
@@ -146,7 +153,7 @@ body {
     .filter{
     width: 250px;
     padding: 20px;
-    background-color: #f4f4f4;
+
     border-right: 1px solid #ccc; 
     margin-bottom: 20px;
   }
@@ -154,24 +161,31 @@ body {
   .filter label {
     display: block;
     margin-bottom: 5px;
+    
   }
   
   .filter select {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
+    border-radius: 10px;
   }
   
-  button {
+   #apply-filters {
+    /* margin-left: 20px; */
     padding: 10px 15px;
-    background-color: #007BFF;
+    background-color: #EB5126;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 10px;      
   }
   
-  button:hover {
-    background-color: #0056b3;
+  #apply-filters:hover {
+    background-color: #d64a24;
+    transition: 0.2s;
+
+    
   }
   
   .course-list {
