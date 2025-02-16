@@ -6,19 +6,25 @@
     <title>Plataforma de cursos</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="./stye.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+
+
 </head>
 <body>
     <nav>
         <div class="logo">
             <img src="./assets/fenix-logo.png" alt="logo">
         </div>
+        
         <input type="text" id="search" placeholder="Pesquisar cursos...">
 
         <!-- orgnização dos filtros -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <h3>Filtros e Ordenação</h3>
+            <h3>Filtros</h3>
                 
                 <div class="filter">
                 <label for="category">Categoria:</label>
@@ -42,7 +48,7 @@
         </div>
 
         <div id="sidebar">
-            <span onclick="openNav()">Filtro<img src="./assets/Filter.svg" alt="filtro"></span>
+            <span onclick="openNav()">Filtro<img src="./assets/Filter.svg" alt="iconeFiltro"></span>
         </div>
 
         <div id="user">
@@ -52,17 +58,54 @@
     </nav>
 
     <main>
-        <div class="course-list">
-                        <!-- Aqui serão exibidos os cursos filtrados -->
+
+        <!-- <div class="course-list">
+         Aqui serão exibidos os cursos filtrados
+        </div> -->
+
+        <!-- CARRSOSSEL -->
+        <!-- Slider main container -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./assets/carousel/image 4.svg" alt="">
                 </div>
+                <div class="swiper-slide">
+                    <img src="./assets/carousel/image 5.svg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/carousel/image 6.svg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <br>
 
-
+        <!-- carrossel de cursos -->
+         <!-- categoria programação -->
+            <div class="swiper-courses">
+                <div class="swiper-wrapper-courses">
+                <div class="swiper-slide-courses"><img src="./assets/carousel/image 4.svg" alt=""></div>
+                <div class="swiper-slide-courses"><img src="./assets/carousel/image 5.svg" alt=""></div>
+                <div class="swiper-slide-courses"><img src="./assets/carousel/image 6.svg" alt=""></div>
+                <div class="swiper-slide-courses"><img src="./assets/carousel/image 4.svg" alt=""></div>
+                <div class="swiper-slide-courses"><img src="./assets/carousel/image 5.svg" alt=""></div>
+                <div class="swiper-slide-courses"><img src="./assets/carousel/image 6.svg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        
     </main>
 
 
     <footer></footer>
-
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
 </body>
- <script src="./script.js"></script>
+ 
 </html>

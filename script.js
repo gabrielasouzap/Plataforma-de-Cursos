@@ -56,4 +56,50 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("sidebar").style.marginRight= "0";
   }
-  
+
+  // Carrossel
+
+    var swiper = new Swiper(".swiper", {
+      loop:true,
+      grabCursor: true,
+      effect: "fade",
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable:true
+      },
+    });
+
+// carrossel de cursos
+
+var swiper = new Swiper(".Swiper-courses", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+  // breakpoints: {
+      //   640: {
+      //     slidesPerView: 1,
+      //     spaceBetween: 18
+      //   },
+      //   768: {
+      //     slidesPerView: ,
+      //     spaceBetween: 18
+      //   },
+      //   1188: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 24
+      //   }
+      // }
