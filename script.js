@@ -80,26 +80,20 @@ function openNav() {
 
 // carrossel de cursos
 
-var swiper = new Swiper(".Swiper-courses", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+const courseContainers = [...document.querySelectorAll('.course-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
 
-  // breakpoints: {
-      //   640: {
-      //     slidesPerView: 1,
-      //     spaceBetween: 18
-      //   },
-      //   768: {
-      //     slidesPerView: ,
-      //     spaceBetween: 18
-      //   },
-      //   1188: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 24
-      //   }
-      // }
+courseContainers.forEach((item, i) => {
+    let containerDimensions = item.getBoundingClientRect();
+    let containerWidth = containerDimensions.width;
+
+    nxtBtn[i].addEventListener('click', () => {
+        item.scrollLeft += containerWidth;
+    })
+
+    preBtn[i].addEventListener('click', () => {
+        item.scrollLeft -= containerWidth;
+    })
+})
+
