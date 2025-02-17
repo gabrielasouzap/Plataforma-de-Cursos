@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+      background-color:#F7F7F7 ;
+      font-family: Arial, sans-serif;
+      height: 100hv;
+      min-height: 100vh;
+      
+      /* z-index: 1100; */
+  
+    }
+
+nav{
+    display: flex;
+    /* gap: 50px;   responsavel pelo espacamento  dos elementos no display */
+    background-color: white;
+    justify-content: space-around;
+    /* margin-top: 20px; */
+    align-items: center;
+
+    /* faixa separando a navegação do conteúdo */ 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra  */
+    top: 0;
+    left: 0; 
+    width: 100%;
+    padding-right: 128px;
+    padding-left: 128px; 
+
+
+    
+    position: fixed; /*fixar no topo*/
+    align-items: center;
+    z-index: 1100; /*navbar fixada na frente*/
+    
+    
+  }
+
+  .logo img{
+    max-width: 70%;
+    
+
+  }
+
+
+  #search{
+    background-color:  #e7e6e6f6;
+
+    height: 45px;   /*altura */
+    width: 799px; /*largura */
+    border: none;
+    /* bottom: 5px; */
+    position: relative;
+
+    padding: 0 2.4rem ;
+
+  }
+
+
+  nav #search, #user{
+    margin: 0px 20px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0, 40%) ;
+    font-size: 22px;
+
+
+  }
+
+  .discription .id{
+    font-size: 25px;
+    margin-bottom: 5vh;
+  }
+
+  .course-banner {
+    position: relative;
+    background: url(../assets/carousel/image\ 4.svg) no-repeat center; 
+    background-size: cover;
+    height: 500px;
+}
+
+/* Camada escura separada da imagem */
+.course-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); /* Escurece a imagem */
+    z-index: 1; /* Mantém a camada abaixo do texto */
+}
+
+/* Ajustando o texto para ficar por cima */
+.discription {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    z-index: 2; /* Mantém o texto acima da camada escura */
+}
+
+
+
+.informations{
+display:block;
+margin-left: 10px;
+
+}
+
+.informations .info-block{
+    border: 2px solid rgba(0, 0, 0, 0.315);
+    border-radius: 15px;
+    max-width: 100px;
+    padding: 15px 5px;
+    
+}
+
+

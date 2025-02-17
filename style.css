@@ -62,6 +62,8 @@ body {
 
   }
 
+ 
+
   nav #search, #sidebar, #user{
     margin: 0px 20px;
     border-radius: 15px;
@@ -102,9 +104,6 @@ body {
   #sidebar:hover{
     background-color: #d8d8d8f6;
     transition: 0.2s;
-  }
-  #user{
-
   }
 
 
@@ -190,11 +189,9 @@ body {
     
   }
   
-  .course-list {
-  
-  
+  main{
+    background-color: #E7E6E6F6;
   }
-  
 
 /* carrossel inicial */
 
@@ -222,15 +219,6 @@ body {
 
 }
 
-.swiper-button-prev{
-  
-    /* background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23818181'%2F%3E%3C%2Fsvg%3E"); */
-  }
-
-    
-.swiper-button-next{
-
-}
 
 /* carrossel de cursos */
 
@@ -238,6 +226,7 @@ body {
   position: relative;
   overflow: hidden;
   padding: 20px;
+  align-items: center;
 }
 
 .course-category{
@@ -251,9 +240,7 @@ body {
 .course-container{
   padding: 0 10vw;
   display: flex;
-  overflow: auto;
   scroll-behavior: smooth;
-
   justify-content: space-around;
 }
 
@@ -265,22 +252,25 @@ body {
   
   flex: 0 0 auto;
   width: 500px;
-  height: 450px;
+  height: 475px;
   margin-right: 100px;
-  border: 2px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .course-img{
   position: relative;
   width: 100%;
   height: 350px;
-  overflow: hidden;
 
 }
 
+
 .course-thumb{
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
 }
 
@@ -289,26 +279,21 @@ body {
 .card-btn {
   position: absolute;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 5%;
   padding: 10px;
   width: 90%;
-  text-transform: capitalize;
   border: none;
   outline: none;
-  background: #fff;
   border-radius: 5px;
-  transition: 0.5s;
   cursor: pointer;
-  opacity: 0;
+  transition: 0.2S;
+ 
 }
 
-.course-card:hover .card-btn{
-  opacity: 1;
-}
+
 
 .card-btn:hover {
-  background: #ff7d7d;
+  background: #EB5126;
   color: #fff;
 }
 
@@ -332,12 +317,12 @@ body {
   margin: 5px 0;
 }
 
-.price {
+.duration {
   font-weight: 900;
   font-size: 20px;
 }
 
-.actual-price {
+.actual-duration {
   margin-left: 20px;
   opacity: 0.5;
   text-decoration: line-through;
@@ -353,7 +338,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
   cursor: pointer;
   z-index: 8;
 }
