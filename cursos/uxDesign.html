@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styleCourses.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -30,71 +34,81 @@
     
         <div class="course-banner">
             <div class="discription">
-                <p class="id">id: 123456</p>
+                <p class="id"> <a href="../index.html">Home</a> > id: 123456</p>
                 <h1>UX Design</h1>
                 <br>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum reiciendis voluptatum eaque beatae quaerat dolorem perferendis magnam ab, sequi asperiores praesentium eum vitae at enim. Vel aperiam itaque cumque ut.</p>
             </div>
         </div>
 
-    <class class="container">    
+    <section class="informations-container">    
+                <h1 class="info">Informações</h1>
+        <div class="informations-block">
+               
+                <div class="info-block">
+                    <i class="fa-regular fa-clock"></i>
+                    15 horas
+                </div>
+                <div class="info-book">
+                    <i class="fa-solid fa-book"></i>
+                    12 modulos
+                </div>
 
-        <section class="informations">
-            <h1>Informações</h1>
-            <h2>Este curso Incluir</h2>
-            <div class="info-block">
-                <i class="fa-regular fa-clock"></i>
-                15 horas
-            </div>
-            <div class="info-book">
-                <i class="fa-solid fa-book"></i>
-                12 modulos
-
-            </div>
+                <button class="insc-btn">inscreva-se</button>
+        </div>   
+        
             
+            <div class="appren">
+                <h3>O que você aprenderá</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ratione quibusdam, voluptas exercitationem, impedit, consectetur non nulla deserunt dolorem quasi earum sit? Molestias perspiciatis saepe corporis nesciunt beatae perferendis consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro accusamus magnam non voluptas recusandae sequi deserunt sint error suscipit veritatis repudiandae, quod quia accusantium, vel asperiores laudantium? Cupiditate, tempora laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique expedita cumque quia vel voluptatem est aspernatur iusto delectus qui placeat veniam eius, obcaecati molestiae quas nostrum aliquam enim minus.
+                </p>
+            </div>
 
-            <button class="insc-btn">inscreva-se</button>
+            <h3>Módulos do curso</h3>
+            <div class="course-list">
+                <ul>
+                    <li> ● Introdução</li>
+                    <li> ● Ethical Hacking - Fundamentos e metodologia</li>
+                    <li> ● Preparação do ambiente de testes</li>
+                    <li> ● Fundamentos de protocolos de redes e Linux</li>
+                    <li> ● Reconhecimento</li>
+                    <li> ● Varredura - Encontrando dispositivos e serviços</li>
+                    <li> ● Enumeração - Identificando sistemas e vulnerabilidades</li>
+                    <li> ● Privacidade - mascarando seu endereço online</li>
+                    <li> ● Netcat - aprendendo a usar o canivete suíço do TCP/IP</li>
+                    <li> ● Exploração server-side com o Metasploit</li>
+                </ul>    
+            </div>
 
-            <h2>O que você aprenderá</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ratione quibusdam, voluptas exercitationem, impedit, consectetur non nulla deserunt dolorem quasi earum sit? Molestias perspiciatis saepe corporis nesciunt beatae perferendis consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro accusamus magnam non voluptas recusandae sequi deserunt sint error suscipit veritatis repudiandae, quod quia accusantium, vel asperiores laudantium? Cupiditate, tempora laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique expedita cumque quia vel voluptatem est aspernatur iusto delectus qui placeat veniam eius, obcaecati molestiae quas nostrum aliquam enim minus.
-            </p>
-
-            <h2>Conteúdo do curso</h2>
-            <h3>Modulos:</h3>
-
-            <ul class="course-list">
-                <li> ● Introdução</li>
-                <li> ● Ethical Hacking - Fundamentos e metodologia</li>
-                <li> ● Preparação do ambiente de testes</li>
-                <li> ● Fundamentos de protocolos de redes e Linux</li>
-                <li> ● Reconhecimento</li>
-                <li> ● Varredura - Encontrando dispositivos e serviços</li>
-                <li> ● Enumeração - Identificando sistemas e vulnerabilidades</li>
-                <li> ● Privacidade - mascarando seu endereço online</li>
-                <li> ● Netcat - aprendendo a usar o canivete suíço do TCP/IP</li>
-                <li> ● Exploração server-side com o Metasploit</li>
-            </ul>
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </section>
-    </class>
+        
+    </section>
 </main>
 <footer>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam officia ipsum explicabo nam ex enim deleniti ipsa, impedit fugit rerum modi vero eius ut minus esse odio odit ea voluptates.</p>
+    <div class="footer-left">
+            <img src="../assets/footer-fenix-logo .svg" alt="Logo">
+            <div class="social-icons">
+                <a href="#"> <i class="fa-brands fa-instagram" style="color: #000000;"></i>&nbsp Instagram</a> 
+                <a href="#"><i class="fa-brands fa-facebook" style="color: #000000;"></i>&nbsp Facebook</a> 
+                <a href="#"><i class="fa-brands fa-twitter" style="color: #000000;"> </i>&nbsp Twitter</a>
+                <a href="#"><i class="fa-solid fa-phone" style="color: #000000;"></i>&nbsp (11)94002-8922</a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <h3>Nossa história</h3>
+            <p>Fundada em 2018, a EduTech Academy nasceu com a missão de tornar a educação acessível e inovadora. O que começou como um pequeno projeto entre amigos apaixonados por tecnologia e aprendizado se tornou uma das principais plataformas de cursos online, capacitando milhares de alunos ao redor do mundo.
+            <p>Nosso compromisso é ajudar você a alcançar seus objetivos, no seu ritmo e de onde estiver.</p>   
+            Junte-se a nós e transforme seu futuro com a EduTech Academy! 🚀</p>
+        </div>
+        <div class="footer-right">
+                <em> "Ensinar não é transferir conhecimento, mas criar as possibilidades para a sua própria produção ou a sua construção."
+                <p>- Paulo Freire</p></em>
+        </div>
+        <div class="footer-bottom">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum reprehenderit quibusdam delectus cumque! Quidem culpa quae rerum! Eligendi officia, sequi sunt, quas dolorum consequatur velit non fugit nostrum, alias at? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse repellendus in accusantium, praesentium suscipit illum iusto laboriosam culpa, expedita consequatur ex odit iste. Deleniti quae laudantium, ipsum quia distinctio nam. </p>
+            <p><br/> &copy; 2024 Todos os direitos reservados.</p>
+        </div>
 </footer>
+
     <script src="./JScourses.js"></script>
 </body>
 </html>
