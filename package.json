@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "name": "plataforma-de-cursos",
+  "version": "1.0.0",
+  "main": "apiMock.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
