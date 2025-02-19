@@ -58,15 +58,13 @@ app.get('/courses/:id', (req, res) => {
   course ? res.json(course) : res.status(404).json({ error: "Curso não encontrado" });
 });
 
-app.get('/search/:sentence.toLowerCase', (req, res) => {
-  const stringSearch = req.params.sentence;
-  
+app.get('/search/:sentence', (req, res) => {
+  const stringSearch = req.params.sentence.toLowerCase();
 
   const searchJson = courses.filter(
-    c => c.name.toLowerCase().includes(stringsSearch) === stringSearch ||
-        
+    c => c.name.toLowerCase().includes(stringSearch) === true        
   );
-
+  
   if (!searchJson) {
     return res.status(404).json({ error: 'Nenhum curso encontrado!' });
   }
@@ -76,8 +74,15 @@ app.get('/search/:sentence.toLowerCase', (req, res) => {
 
 app.post('/search', (req, res) => {
   const data = req.body;
-  courses.push(newCourse);
-  res.status(201).json(newCourse);
+  const stringSearch = data.category.toLowerCase();
+
+  const searchJson = courses.filter(
+    c => c.category.toLowerCase().includes(stringSearch) === true        
+  );
+
+  if(data.durationOrder === "asc") searchJson.sort((a,b) => a.duration - b.duration);
+  if(data.durationOrder === "desc") searchJson.sort((a,b) => b.duration - a.duration);
+  res.status(200).json(searchJson);
 });
 
 app.post('/courses', (req, res) => {
