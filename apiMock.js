@@ -1,14 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 4000;
+const port = 3000;
 
 app.use(cors());
 app.use(express.json());
 
 let courses = [
   // Programação
-  { id: 1, name: "Introdução à Programação", description: "Aprenda os fundamentos da programação.", category: "Programação", duration: 40, image: "https://example.com/images/programacao.jpg" },
+  { id: 1, name: "Introdução à Programação", description: "Aprenda os fundamentos da programação.", category: "Programação", duration: "40", image: "https://example.com/images/programacao.jpg" },
 
   { id: 2, name: "JavaScript do Zero ao Avançado", description: "Domine JavaScript e construa aplicações web dinâmicas.", category: "Programação", duration: 50, image: "https://example.com/images/javascript.jpg" },
 
@@ -45,7 +45,7 @@ let courses = [
   { id: 16, name: "Marketing e Automação", description: "Aprenda a criar campanhas eficazes de e-mail marketing.", category: "Marketing", duration: 27, image: "https://example.com/images/emailmarketing.jpg" },
 
   { id: 17, name: "Google Ads para Iniciantes", description: "Aprenda a criar campanhas no Google Ads para atrair clientes.", category: "Marketing", duration: 30, image: "https://example.com/images/googleads.jpg" },
-  
+
   { id: 18, name: "Branding e Posicionamento de Marca", description: "Aprenda a criar uma identidade forte para sua marca.", category: "Marketing", duration: 34, image: "https://example.com/images/branding.jpg" }
 ];
 
@@ -58,14 +58,13 @@ app.get('/courses/:id', (req, res) => {
   course ? res.json(course) : res.status(404).json({ error: "Curso não encontrado" });
 });
 
-app.get('/search/:sentence', (req, res) => {
+app.get('/search/:sentence.toLowerCase', (req, res) => {
   const stringSearch = req.params.sentence;
   
 
-  const searchJson = courses.find(
-    c => c.id === stringSearch ||
-         c.name === stringSearch ||
-         c.category === stringSearch
+  const searchJson = courses.filter(
+    c => c.name.toLowerCase().includes(stringsSearch) === stringSearch ||
+        
   );
 
   if (!searchJson) {
