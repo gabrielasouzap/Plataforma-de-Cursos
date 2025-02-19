@@ -2,9 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
-
-  
 }
 
 body {
@@ -12,29 +9,27 @@ body {
     font-family: Arial, sans-serif;
     height: 100hv;
     min-height: 100vh;
-    
     /* z-index: 1100; */
-
   }
   
   nav {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza os itens */
+    justify-content: center; 
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding: 20px 5vw; /* Espaçamento lateral proporcional */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px 5vw; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1100;
-    gap: 2vw; /* Espaço entre os elementos */
+    gap: 2vw; 
 }
 
 /* Ajuste para a logo */
 .logo img {
-    max-width: 80px; /* Tamanho flexível */
+    max-width: 80px; 
 }
 .search-box {
   position: relative;
@@ -52,14 +47,14 @@ body {
 
 .search-box i {
   position: absolute;
-  left: 12px; /* Ajusta a posição da lupa */
+  left: 12px; 
   color: #555;
 }
 
 #search {
   width: 100%;
   height: 100%;
-  padding-left: 35px; /* Garante espaço para o ícone dentro do input */
+  padding-left: 35px; 
   border: none;
   background: transparent;
   outline: none;
@@ -71,9 +66,9 @@ body {
 .search-box, #search {
     background-color: #e7e6e6f6;
     height: 40px;
-    flex: 1; /* Faz a barra ocupar o espaço disponível */
-    max-width: 500px; /* Limita o tamanho máximo */
-    min-width: 150px; /* Evita que fique muito pequena */
+    flex: 1; 
+    max-width: 500px; 
+    min-width: 150px; 
     border: none;
     padding: 0 1.5rem;
     border-radius: 15px;
@@ -84,10 +79,10 @@ body {
 .nav-icons {
     display: flex;
     align-items: center;
-    gap: 10px; /* Mantém os ícones mais próximos */
+    gap: 10px; 
 }
 
-/* Ícones gerais */
+
 #sidebar {
     background-color: #e7e6e6f6;
     padding: 8px;
@@ -98,38 +93,32 @@ body {
     transition: background-color 0.2s;
 }
 
-/* Ajuste no tamanho dos ícones */
+
 #sidebar img {
     max-width: 28px;
 }
 
-/* Hover nos ícones */
+
 #sidebar:hover {
     background-color: #d8d8d8f6;
 }
 
 
-  
-
-  #sidebar span{
-    display: flex;
-    font-size:15px;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 0 0.1rem ;
-    height: 5px;
-    
-    
- 
+#sidebar span{
+  display: flex;
+  font-size:15px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 0.1rem ;
+  height: 5px;
   }
 
   #sidebar:hover{
     background-color: #d8d8d8f6;
     transition: 0.2s;
   }
-
 
 
   .sidenav {
@@ -173,9 +162,7 @@ body {
     margin-left: 50px;
   }
   
-
-  
-    .filter{
+  .filter{
     width: 250px;
     padding: 20px;
 
@@ -197,7 +184,6 @@ body {
   }
   
    #apply-filters {
-    /* margin-left: 20px; */
     padding: 10px 15px;
     background-color: #EB5126;
     color: white;
@@ -238,7 +224,6 @@ body {
   align-items: center;
   width: 100%;
   max-height:60vh ;
-  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -282,7 +267,6 @@ body {
 }
 
 .course-card{
-  
   flex: 0 0 calc(33.33% - 1rem); /* 3 cards por linha */;
   width: 335px;
   height: 475px;
@@ -297,7 +281,6 @@ body {
   position: relative;
   width: 100%;
   height: 320px;
-
 }
 
 
@@ -306,7 +289,6 @@ body {
   height: 80%;
   object-fit: cover;
 }
-
 
 
 .card-btn {
@@ -322,7 +304,6 @@ body {
   transition: 0.2S;
  
 }
-
 
 
 .card-btn:hover {
@@ -368,18 +349,15 @@ p.course-short-descripition{
 
 .pre-btn,
 .nxt-btn {
-  width: 50px; /* Ajuste conforme necessário */
-  height: 85px; /* Reduz a altura */
+  width: 50px; 
   position: absolute;
-  /* top: -30%; 
-  left: 10%; */
-  transform: translateY(0); /* Ajusta o alinhamento */
+  transform: translateY(0); 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(190, 184, 184); /* Opcional: fundo mais visível */
-  border-radius: 10%; /* Deixa os botões arredondados */
-  border: 1px solid #b1b0b0; /* Borda sutil */
+  background-color: rgb(190, 184, 184); /
+  border-radius: 10%; 
+  border: 1px solid #b1b0b0; 
   z-index: 10;
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -438,12 +416,11 @@ footer {
   width: 100px;
 }
 .social-icons {
-  /* display: flex; */
   margin-top: 10px;
   padding: 20px;
 }
 .social-icons a {
-  display: flex; /*alinhando os intems */
+  display: flex; 
   margin: 0 5px;
   text-decoration: none;
   color: black;
@@ -461,14 +438,34 @@ footer {
   font-size: 12px;
 }
 
-/* Em tablets (máx. 900px), mostramos 2 cards */
+
+
+
+/* Layout grid (quando o filtro é aplicado) */
+.course-container.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.no-results {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+  margin-top: 20px;
+}
+
+
+
 @media (max-width: 900px) {
   .course-card {
     flex: 0 0 calc(50% - 1rem); /* 2 cards por linha */
   }
 }
 
-/* Em celulares (máx. 600px), mostramos apenas 1 card */
+
 @media (max-width: 600px) {
   .course-card {
     flex: 0 0 100%; /* 1 card por linha */

@@ -24,7 +24,7 @@
             <input type="text" id="search" placeholder="Pesquisar cursos...">
         </div>
 
-        <!-- orgnização dos filtros -->
+        <!-- filtros -->
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <h3>Filtros</h3>
@@ -36,7 +36,6 @@
                     <option value="programacao">Programação</option>
                     <option value="design">Design</option>
                     <option value="marketing">Marketing</option>
-                    <!-- Adicione outras categorias conforme necessário -->
                 </select>
                 </div>
                 
@@ -63,23 +62,18 @@
 
     <main>
 
-        <!-- <div class="course-list">
-         Aqui serão exibidos os cursos filtrados
-        </div> -->
 
         <!-- CARROSSEL -->
-        <!-- Slider main container -->
         <div class="swiper">
             <div class="swiper-wrapper">
-                <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="./assets/carousel/image 4.svg" alt="">
+                    <img src="./assets/banner/Coaching.webp" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/carousel/image 5.svg" alt="">
+                    <img src="./assets/banner/design.webp" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./assets/carousel/image 6.svg" alt="">
+                    <img src="./assets/banner/e-learning.jpg" alt="">
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -97,8 +91,8 @@
             <div class="course-container">
               <div class="course-card" data-category="programacao">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
-                  <button class="card-btn">SAIBA MAIS</button>
+                  <img src="./assets/cards/introProg.jpg" class="course-thumb" alt="">
+                  <button onclick="window.location.h" class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
                   <h4 class="course-brand">Introdução à Programação</h4>
@@ -106,9 +100,10 @@
                   <p class="course-short-descripition">Aprenda os fundamentos da programação.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="programacao">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/javass.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -117,9 +112,10 @@
                   <p class="course-short-descripition">Domine JavaScript e construa aplicações web dinâmicas.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="programacao">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/progPython.webp" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -128,9 +124,10 @@
                   <p class="course-short-descripition">Aprenda Python do básico ao intermediário.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="programacao">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/desenReact.png" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -139,9 +136,10 @@
                   <p class="course-short-descripition">Aprenda a desenvolver aplicações web modernas com React.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="programacao">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/dbMySQL.webp" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -150,9 +148,10 @@
                   <p class="course-short-descripition">Entenda a modelagem e manipulação de dados com MySQL.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="programacao">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/estruturaDados.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -172,7 +171,7 @@
             <div class="course-container">
               <div class="course-card" data-category="design">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/designGrafico.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -181,9 +180,10 @@
                   <p class="course-short-descripition">Descubra os conceitos básicos do design gráfico.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="design">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/photoshop.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -192,9 +192,10 @@
                   <p class="course-short-descripition">Aprenda a usar o Photoshop para criação e edição de imagens.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="design">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/uxUi.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -205,7 +206,7 @@
               </div>
               <div class="course-card" data-category="design">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/ilustraçãoDigital.png" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -214,9 +215,10 @@
                   <p class="course-short-descripition">Aprenda técnicas básicas para criar ilustrações digitais.</p>
                 </div>
               </div>
+
               <div class="course-card" data-category="design">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/idetidadeVisual.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -227,7 +229,7 @@
               </div>
               <div class="course-card" data-category="design">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/designGrafico.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -247,7 +249,7 @@
             <div class="course-container">
               <div class="course-card" data-category="marketing">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/marketing.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -258,7 +260,7 @@
               </div>
               <div class="course-card" data-category="marketing">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets//cards/seo.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -269,7 +271,7 @@
               </div>
               <div class="course-card" data-category="marketing">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/redesSociais.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -280,8 +282,8 @@
               </div>
               <div class="course-card" data-category="marketing">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
-                  <button class="card-btn">SAIBA MAIS</button>
+                  <img src="./assets/cards/markAutomacao.jpg" class="course-thumb" alt="">
+                  <button class="card-btn"><a href=""></a>SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
                   <h4 class="course-brand">Marketing e Automação</h4>
@@ -291,7 +293,7 @@
               </div>
               <div class="course-card" data-category="marketing">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/googleAds.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
@@ -302,7 +304,7 @@
               </div>
               <div class="course-card" data-category="marketing">
                 <div class="course-img">
-                  <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
+                  <img src="./assets/cards/brandingMarca.jpg" class="course-thumb" alt="">
                   <button class="card-btn">SAIBA MAIS</button>
                 </div>
                 <div class="course-info">
