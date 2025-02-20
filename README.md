@@ -6,7 +6,7 @@ Este projeto é uma plataforma de cursos online desenvolvida utilizando **HTML, 
 ---
 
 ##  Screenshot do Projeto
-![Screenshot do Projeto](../assets/imgReadme.png)
+![Screenshot do Projeto](./assets/imgReadme.png)
 
 ---
 
