@@ -6,7 +6,7 @@ Este projeto é uma plataforma de cursos online desenvolvida utilizando **HTML, 
 ---
 
 ##  Screenshot do Projeto
-![Screenshot do Projeto](../assets/imgReadme.png)
+![Screenshot do Projeto](./assets/imgReadme.png)
 
 ---
 
@@ -58,8 +58,8 @@ http://localhost:3000/home
 - Páginas dinâmicas para exibição de **cursos individuais**. 
  
 ## ❌ Funcionalidades que ainda não estão funcionando:
-🔹 Ícone de usuário na página principal.
-🔹 Barra de pesquisa na segunda página (detalhes do curso).
+- Ícone de usuário na página principal.
+- Barra de pesquisa na segunda página (detalhes do curso).
 ---
 
 ##  Melhorias Futuras
