@@ -1,12 +1,16 @@
 const idCurso = Number(window.location.search.split("id=")[1])
 
-function getInfos(){
-  const infosCurso = requestInfo("GET", idCurso)
-  console.log(infosCurso)
-  document.querySelector(".loading").style.display = "none"
+function changePage(dados){
+  document.querySelector('h1').innerHTML = dados.name
+  modulos_formatados = createLis(dados.modules)
+  console.log(modulos_formatados)
+  document.querySelector('.lista-modulos').innerHTML = modulos_formatados
+  document.querySelector('.duracao' ).innerHTML = dados.duration
+  document.querySelector('.descript').innerHTML = dados.description
+  
 }
 
-getInfos()
+requestInfo("GET", idCurso)
 
 function requestInfo(type, param) {
   if (type === "GET") {
@@ -18,6 +22,7 @@ function requestInfo(type, param) {
         return response.json();
       })
       .then((data) => {
+        changePage(data[0])
         console.log("Dados recebidos do servidor:", data);
       })
       .catch((err) => {
@@ -35,10 +40,6 @@ function requestInfo(type, param) {
     })
       .then((response) => {
         console.log(response)
-        if (!response.ok) {
-          throw new Error(`Erro: ${response.status}`);
-        }
-        return response.json();
       })
       .then((data) => {
         console.log("Resposta do servidor:", data);
@@ -47,4 +48,14 @@ function requestInfo(type, param) {
         console.error("Erro na requisição:", error);
       });
   }
+}
+
+function createLis(modules){
+  const arr = new Array();
+
+  modules.forEach(e => {
+    arr.push(`<li> ● ${e}</li>`)
+  })
+
+  return arr.join('')
 }
