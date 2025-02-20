@@ -101,10 +101,36 @@ main{
 
 .course-banner {
   position: relative;
-  background: url(../assets/carousel/image\ 4.svg) no-repeat center;
-  background-size: cover;
   height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Caso não tenha imagem carregada */
 }
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Deixa a imagem no fundo */
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem cobrindo todo o espaço */
+}
+
+.description {
+  position: relative;
+  color: white;
+  max-width: 600px;
+  z-index: 1;
+}
+
 
 /* Camada escura separada da imagem */
 .course-banner::before {
@@ -152,7 +178,7 @@ main{
   gap: 20px;
 }
 
-.info-block,
+.info-duration,
 .info-book,
 .insc-btn {
   display: inline;
@@ -173,7 +199,7 @@ main{
   background: #cc4621;
 }
 
-.info-block,
+.info-duration,
 .info-book {
   background: #e7e6e6f6;
 }
@@ -205,7 +231,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   border-bottom: 1px solid #ddd;
-  transition: background 0.3s;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .course-list li:last-child {

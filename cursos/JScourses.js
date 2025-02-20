@@ -7,6 +7,7 @@ function changePage(dados){
   document.querySelector('.lista-modulos').innerHTML = modulos_formatados
   document.querySelector('.duracao' ).innerHTML = dados.duration
   document.querySelector('.descript').innerHTML = dados.description
+  document.querySelector('').innerHTML = dados.image
   
 }
 

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "4.21.2"
+  },
+  "name": "plataforma-de-cursos",
+  "version": "1.0.0",
+  "main": "apiMock.js",
+  "scripts": {
+    "start": "npm install && node apiMock.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
