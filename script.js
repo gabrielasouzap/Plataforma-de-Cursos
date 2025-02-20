@@ -1,5 +1,19 @@
 const applyFiltersButton = document.getElementById("apply-filters");
 
+document.addEventListener("DOMContentLoaded",  async () => {
+  const response_programacao = await requestInfo("POST", {category: "programação", durationOrder: 'asc'}, {type: "home", classe: "container-programacao"})
+  const response_design = await requestInfo("POST", {category:'design', durationOrder: 'asc'}, {type: "home", classe: "container-design"})
+  const response_marketing = await requestInfo("POST", {category: 'marketing', durationOrder: 'asc'}, {type: "home", classe: "container-marketing"})
+});
+
+function createCardsInitial(data, classe){
+  const arrCard = new Array()
+  data.forEach(e => {
+    arrCard.push(createCards(e))
+  })
+  document.querySelector(`.${classe}`).innerHTML = arrCard.join("");
+}
+
 applyFiltersButton.addEventListener("click", async () => {
   const category = document.getElementById("category").value;
   const durationOrder = document.getElementById("duration").value;
@@ -10,9 +24,11 @@ applyFiltersButton.addEventListener("click", async () => {
   }
   console.log(data)
 
-  const response = await requestInfo("POST", data)
+  const response = await requestInfo("POST", data, {type: "normal"})
   console.log(response)
 });
+
+
 
 
 function displayCourses(courses) {
@@ -79,9 +95,10 @@ courseContainers.forEach((item, i) => {
   });
 });
 
+
 const inputSearchDom = document.querySelector("#search");
 
-function requestInfo(type, param) {
+function requestInfo(type, param, local) {
   if (type === "GET") {
     fetch(`http://localhost:3000/search/${param}`)
       .then((response) => {
@@ -114,6 +131,7 @@ function requestInfo(type, param) {
         return response.json();
       })
       .then((data) => {
+        if(local.type === 'home') createCardsInitial(data, local.classe)
         return data 
       })
       .catch((error) => {
@@ -136,27 +154,30 @@ function handlerSearch(data) {
 }
 
 function createCards(infos) {
+  console.log(infos.image);
   const card = `
 <div class="course-card">
-<div class="course-img">
-    <img src="./assets/carousel/image 4.svg" class="course-thumb" alt="">
-    <button class="card-btn">SAIBA MAIS</button>
-</div>
-<div class="course-info">
-    <h2 class="course-brand">${infos.name}</h2>
-    <p class="course-short-descripition">${infos.description}</p>
-    <span class="price">${infos.duration}</span>
-</div>
+  <div class="course-img">
+      <img src="./assets/cards/introProg.jpg" class="course-thumb" alt="">
+      <button onclick="window.location.href='http://127.0.0.1:5500/cursos/uxDesign.html?id=${infos.id}'" class="card-btn">SAIBA MAIS</button>
+  </div>
+  <div class="course-info">
+      <h4 class="course-brand">${infos.name}</h4>
+      <h4>${infos.duration} horas</h4>
+      <p class="course-short-descripition">${infos.description}</p>
+  </div>
 </div>
 `;
 
   return card;
 }
 
+
+
 inputSearchDom.addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
-    const cardsInfo = requestInfo("GET", inputSearchDom.value);
+    const cardsInfo = requestInfo("GET", inputSearchDom.value, {type: "normal"});
     console.log(cardsInfo)
   }
 });

@@ -9,9 +9,9 @@ app.use(express.json());
 let courses = [
   // Programação
   
-  { id: "100001", name: "Introdução à Programação", description: "Aprenda os fundamentos da programação.", category: "Programação", duration: "40", image: "https://example.com/images/programacao.jpg", modules: ["Módulo 1: Introdução", "Módulo 2: Variáveis", "Módulo 3: Condicionais", "Módulo 4: Loops", "Módulo 5: Funções", "Módulo 6: Arrays", "Módulo 7: Objetos", "Módulo 8: Classes", "Módulo 9: Herança", "Módulo 10: Projetos"] },
+  { id: "100001", name: "Introdução à Programação", description: "Aprenda os fundamentos da programação.", category: "Programação", duration: "40", image: "assets/cards/introProg.jpg", modules: ["Módulo 1: Introdução", "Módulo 2: Variáveis", "Módulo 3: Condicionais", "Módulo 4: Loops", "Módulo 5: Funções", "Módulo 6: Arrays", "Módulo 7: Objetos", "Módulo 8: Classes", "Módulo 9: Herança", "Módulo 10: Projetos"] },
 
-{ id: "100002", name: "JavaScript do Zero ao Avançado", description: "Domine JavaScript e construa aplicações web dinâmicas.", category: "Programação", duration: "50", image: "https://example.com/images/javascript.jpg", modules: ["Módulo 1: Introdução ao JavaScript", "Módulo 2: Sintaxe Básica", "Módulo 3: Funções e Objetos", "Módulo 4: Manipulação de DOM", "Módulo 5: Eventos e Listeners", "Módulo 6: Promises e Async/Await", "Módulo 7: Manipulação de Arrays", "Módulo 8: Web APIs", "Módulo 9: Ferramentas de Desenvolvimento", "Módulo 10: Projetos com JavaScript"] },
+{ id: "100002", name: "JavaScript do Zero1 ao Avançado", description: "Domine JavaScript e construa aplicações web dinâmicas.", category: "Programação", duration: "50", image: "https://example.com/images/javascript.jpg", modules: ["Módulo 1: Introdução ao JavaScript", "Módulo 2: Sintaxe Básica", "Módulo 3: Funções e Objetos", "Módulo 4: Manipulação de DOM", "Módulo 5: Eventos e Listeners", "Módulo 6: Promises e Async/Await", "Módulo 7: Manipulação de Arrays", "Módulo 8: Web APIs", "Módulo 9: Ferramentas de Desenvolvimento", "Módulo 10: Projetos com JavaScript"] },
 
 { id: "100003", name: "Python para Iniciantes", description: "Aprenda Python do básico ao intermediário.", category: "Programação", duration: "35", image: "https://example.com/images/python.jpg", modules: ["Módulo 1: Introdução ao Python", "Módulo 2: Variáveis e Tipos de Dados", "Módulo 3: Estruturas de Controle", "Módulo 4: Funções e Métodos", "Módulo 5: Manipulação de Arquivos", "Módulo 6: Bibliotecas Python", "Módulo 7: Programação Orientada a Objetos", "Módulo 8: Banco de Dados com Python", "Módulo 9: Web Scraping", "Módulo 10: Projetos em Python"] },
 
@@ -54,8 +54,8 @@ app.get('/courses', (req, res) => {
 });
 
 app.get('/courses/:id', (req, res) => {
-  const course = courses.find(c => c.id === parseInt(req.params.id));
-  course ? res.json(course) : res.status(404).json({ error: "Curso não encontrado" });
+  const course = courses.filter(c => c.id === req.params.id);
+  res.json(course)
 });
 
 app.get('/search/:sentence', (req, res) => {
@@ -74,6 +74,7 @@ app.get('/search/:sentence', (req, res) => {
 
 app.post('/search', (req, res) => {
   const data = req.body;
+  console.log(data)
   const stringSearch = data.category.toLowerCase();
 
   const searchJson = courses.filter(
@@ -92,7 +93,7 @@ app.post('/courses', (req, res) => {
 });
 
 app.put('/courses/:id', (req, res) => {
-  const index = courses.findIndex(c => c.id === parseInt(req.params.id));
+  const index = courses.findIndex(c => c.id === req.params.id);
   if (index !== -1) {
     courses[index] = { ...courses[index], ...req.body };
     res.json(courses[index]);
@@ -102,7 +103,7 @@ app.put('/courses/:id', (req, res) => {
 });
 
 app.delete('/courses/:id', (req, res) => {
-  const index = courses.findIndex(c => c.id === parseInt(req.params.id));
+  const index = courses.findIndex(c => c.id === req.params.id);
   if (index !== -1) {
     courses.splice(index, 1);
     res.json({ message: "Curso removido com sucesso" });
