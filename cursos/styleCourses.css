@@ -12,27 +12,27 @@ body {
   min-height: 100vh;
   background-color: #e7e6e6f6;
 
-  /* z-index: 1100; */
+
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza os itens */
+    justify-content: center; 
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding: 20px 5vw; /* Espaçamento lateral proporcional */
+    padding: 20px 5vw; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1100;
-    gap: 2vw; /* Espaço entre os elementos */
+    gap: 2vw; /
 }
 
 /* Ajuste para a logo */
 .logo img {
-    max-width: 80px; /* Tamanho flexível */
+    max-width: 80px; 
 }
 
 .search-box {
@@ -57,7 +57,7 @@ nav {
   #search {
     max-width: 500px;
     min-width: 150px;
-    padding-left: 35px; /* Garante espaço para o ícone dentro do input */
+    padding-left: 35px; 
     outline: none;
     font-size: 16px;
     background-color: transparent;
@@ -75,9 +75,9 @@ nav {
   .search-box, #search {
       
       height: 40px;
-      flex: 1; /* Faz a barra ocupar o espaço disponível */
-      max-width: 500px; /* Limita o tamanho máximo */
-      min-width: 150px; /* Evita que fique muito pequena */
+      flex: 1; 
+      max-width: 500px; 
+      min-width: 150px; 
       border: none;
       
       border-radius: 15px;
@@ -87,7 +87,7 @@ nav {
 .nav-icons {
     display: flex;
     align-items: center;
-    gap: 10px; /* Mantém os ícones mais próximos */
+    gap: 10px; 
 }
 
 /* Ícones gerais */
@@ -130,7 +130,7 @@ nav #search,
 main{
   max-width: 1200px;
   margin: 0 auto;
-      /* padding: 10px;
+    /* padding: 10px;
     padding-top: 1px !important; */
 
 }
@@ -176,8 +176,8 @@ main{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.65); /* Escurece a imagem */
-  z-index: 1; /* Mantém a camada abaixo do texto */
+  background: rgba(0, 0, 0, 0.65); 
+  z-index: 1; 
 }
 
 /* Ajustando o texto para ficar por cima */
@@ -199,7 +199,7 @@ main{
   grid-template-columns: repeat(
     auto-fit,
     minmax(200px, 1fr)
-  ); /* Garante responsividade */
+  ); 
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -313,8 +313,7 @@ footer {
   padding: 20px;
 }
 .social-icons a {
-  display: flex; /*alinhando os intems */
-  margin: 0 5px;
+  display: flex; 
   text-decoration: none;
   color: black;
 }
