@@ -6,7 +6,10 @@ Este projeto é uma plataforma de cursos online desenvolvida utilizando **HTML, 
 ---
 
 ##  Screenshot do Projeto
-![Screenshot do Projeto](../assets/imgReadme.png)
+<p align="center">
+  <img src="../assets/imgReadme.png" width="45%">
+  <img src="../assets/imgReadme1.png" width="45%">
+</p>
 
 ---
 
@@ -44,7 +47,7 @@ node apiMock.js
 ### 🔹 Abrir o arquivo no navegador  
 Após iniciar a API mock, você pode visualizar a plataforma acessando o arquivo HTML diretamente no navegador:
 ```
-http://127.0.0.1:5500/frontend/index.html
+http://localhost:3000/home
 ```
 
 ---
@@ -55,8 +58,11 @@ http://127.0.0.1:5500/frontend/index.html
 - Permite **filtrar cursos por categoria**.  
 - Permite **ordenar cursos por duração** (ascendente e descendente).  
 - Barra de pesquisa para **buscar cursos pelo nome**.  
-- Páginas dinâmicas para exibição de **cursos individuais**.  
-
+- Páginas dinâmicas para exibição de **cursos individuais**. 
+ 
+## ❌ Funcionalidades que ainda não estão funcionando:
+🔹 Ícone de usuário na página principal.
+🔹 Barra de pesquisa na segunda página (detalhes do curso).
 ---
 
 ##  Melhorias Futuras

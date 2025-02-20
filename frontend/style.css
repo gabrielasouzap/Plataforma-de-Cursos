@@ -31,6 +31,7 @@ body {
 .logo img {
     max-width: 80px; 
 }
+
 .search-box {
   display:flex;
   align-items: center;

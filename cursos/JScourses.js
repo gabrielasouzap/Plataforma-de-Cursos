@@ -5,9 +5,9 @@ function changePage(dados){
   modulos_formatados = createLis(dados.modules)
   console.log(modulos_formatados)
   document.querySelector('.lista-modulos').innerHTML = modulos_formatados
-  document.querySelector('.duracao' ).innerHTML = dados.duration
+  document.querySelector('.duracao').innerHTML = dados.duration + " horas";
   document.querySelector('.descript').innerHTML = dados.description
-  document.querySelector('').innerHTML = dados.image
+  document.querySelector('.course-image').src = dados.image;
   
 }
 
